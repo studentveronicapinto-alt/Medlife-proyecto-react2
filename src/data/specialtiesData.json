@@ -1,0 +1,229 @@
+{
+  "cardiologia": {
+    "id": "cardiologia",
+    "title": "CARDIOLOGIA",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2IOHV3WH6DJnDKF8sb8LWKivP1ZmWkootVHEkOdFaNA&s=10",
+    "paragraphs": [
+      "Se especializa en la prevención, diagnóstico y tratamiento de enfermedades del corazón y del sistema cardiovascular. Ofrece evaluación médica, control de factores de riesgo y seguimiento para mantener una buena salud cardíaca y prevenir complicaciones.",
+      "Está indicada para hipertensión, arritmias, colesterol elevado, antecedentes familiares de enfermedad cardíaca y control post-evento cardiovascular, siempre con acompañamiento profesional en cada etapa del proceso."
+    ],
+    "benefits": [
+      {
+        "icon": "fa-solid fa-heart-pulse",
+        "title": "Evaluación cardiovascular",
+        "description": "Diagnóstico completo del funcionamiento de tu corazón."
+      },
+      {
+        "icon": "fa-solid fa-gauge-high",
+        "title": "Control de factores de riesgo",
+        "description": "Manejo de presión arterial, colesterol y otros indicadores clave."
+      },
+      {
+        "icon": "fa-solid fa-shield-heart",
+        "title": "Prevención de complicaciones",
+        "description": "Estrategias para reducir el riesgo de eventos cardíacos."
+      },
+      {
+        "icon": "fa-solid fa-calendar-check",
+        "title": "Seguimiento continuo",
+        "description": "Control periódico de la evolución y ajuste del tratamiento."
+      }
+    ]
+  },
+  "enfermeria": {
+    "id": "enfermeria",
+    "title": "ENFERMERIA",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfpHEtlk-VMsTq2c9s0jQFF80qwTjGWVLapuNwGTPYRA&s=10",
+    "paragraphs": [
+      "Brinda apoyo en la atención y cuidado de los pacientes, incluyendo control de signos vitales, administración de medicamentos, curaciones y asistencia en procedimientos médicos. Su objetivo es garantizar una atención segura, oportuna y de calidad para el bienestar del paciente.",
+      "Está disponible para el cuidado domiciliario, apoyo en la recuperación postoperatoria, manejo de enfermedades crónicas y orientación en el uso correcto de tratamientos, siempre con acompañamiento profesional en cada etapa del proceso."
+    ],
+    "benefits": [
+      {
+        "icon": "fa-solid fa-stethoscope",
+        "title": "Control de signos vitales",
+        "description": "Monitoreo constante para garantizar tu estabilidad y bienestar."
+      },
+      {
+        "icon": "fa-solid fa-syringe",
+        "title": "Administración de medicamentos",
+        "description": "Aplicación segura y oportuna según indicación médica."
+      },
+      {
+        "icon": "fa-solid fa-hand-holding-medical",
+        "title": "Curaciones y procedimientos",
+        "description": "Atención especializada en heridas y cuidados post-quirúrgicos."
+      },
+      {
+        "icon": "fa-solid fa-house-medical",
+        "title": "Atención personalizada",
+        "description": "Cuidado cercano adaptado a las necesidades de cada paciente."
+      }
+    ]
+  },
+  "medicina_general": {
+    "id": "medicina_general",
+    "title": "MEDICINA GENERAL",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIj_wXNfGYhU6PyGtciE2SZHBbAAb1L7XJH0w96C6IrA&s=10",
+    "paragraphs": [
+      "Brindamos atención médica integral para la prevención, diagnóstico y tratamiento de enfermedades comunes. Incluye evaluación clínica, orientación médica, control de salud y seguimiento del paciente, con el objetivo de mantener y mejorar su bienestar general.",
+      "Está indicada para consultas por síntomas generales, control de enfermedades crónicas, chequeos preventivos y orientación médica oportuna, siempre con acompañamiento profesional en cada etapa del proceso."
+    ],
+    "benefits": [
+      {
+        "icon": "fa-solid fa-stethoscope",
+        "title": "Evaluación integral",
+        "description": "Diagnóstico clínico completo para identificar tu condición de salud."
+      },
+      {
+        "icon": "fa-solid fa-shield-heart",
+        "title": "Prevención de enfermedades",
+        "description": "Chequeos periódicos que ayudan a detectar riesgos a tiempo."
+      },
+      {
+        "icon": "fa-solid fa-notes-medical",
+        "title": "Orientación médica",
+        "description": "Recomendaciones claras para el manejo de tu salud."
+      },
+      {
+        "icon": "fa-solid fa-calendar-check",
+        "title": "Seguimiento continuo",
+        "description": "Control periódico de la evolución y ajuste del tratamiento."
+      }
+    ]
+  },
+  "nutricion": {
+    "id": "nutricion",
+    "title": "NUTRICION",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxIraeoJHFpb4kSx3EMCoqeLKdK2sECVrS3X9kMjcxLg&s=10",
+    "paragraphs": [
+      "Ofrece asesoría profesional para mejorar los hábitos alimenticios y promover una alimentación saludable. Incluye evaluación nutricional, elaboración de planes de alimentación personalizados y orientación para la prevención y manejo de diferentes condiciones de salud.",
+      "Está dirigida a personas que buscan alcanzar un peso saludable, mejorar su rendimiento físico o controlar condiciones como diabetes, hipertensión o trastornos digestivos, siempre con acompañamiento profesional en cada etapa del proceso."
+    ],
+    "benefits": [
+      {
+        "icon": "fa-solid fa-clipboard-list",
+        "title": "Plan personalizado",
+        "description": "Alimentación ajustada a tus objetivos y necesidades."
+      },
+      {
+        "icon": "fa-solid fa-weight-scale",
+        "title": "Evaluación nutricional",
+        "description": "Análisis completo de tu estado nutricional actual."
+      },
+      {
+        "icon": "fa-solid fa-heart-pulse",
+        "title": "Prevención de enfermedades",
+        "description": "Hábitos saludables para prevenir y controlar condiciones médicas."
+      },
+      {
+        "icon": "fa-solid fa-calendar-check",
+        "title": "Seguimiento continuo",
+        "description": "Acompañamiento y ajustes periódicos del plan."
+      }
+    ]
+  },
+  "pediatria": {
+    "id": "pediatria",
+    "title": "PEDIATRIA",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKNzfkbAVwdBOmZsCAHczSH14DP4kisuSRJjE7Plk3cQ&s=10",
+    "paragraphs": [
+      "Brinda atención médica especializada para el cuidado de la salud de bebés, niños y adolescentes. Incluye control de crecimiento y desarrollo, esquema de vacunación, diagnóstico y tratamiento de enfermedades comunes, con el objetivo de garantizar un desarrollo saludable en cada etapa.",
+      "Está dirigida a consultas de control periódico, orientación a padres sobre nutrición y hábitos, manejo de enfermedades infantiles frecuentes y seguimiento de condiciones crónicas, siempre con acompañamiento profesional en cada etapa del proceso."
+    ],
+    "benefits": [
+      {
+        "icon": "fa-solid fa-child-reaching",
+        "title": "Control de crecimiento",
+        "description": "Seguimiento del desarrollo físico y cognitivo de tu hijo."
+      },
+      {
+        "icon": "fa-solid fa-syringe",
+        "title": "Esquema de vacunación",
+        "description": "Orientación y control del calendario de vacunas al día."
+      },
+      {
+        "icon": "fa-solid fa-notes-medical",
+        "title": "Diagnóstico oportuno",
+        "description": "Identificación temprana de enfermedades comunes en la infancia."
+      },
+      {
+        "icon": "fa-solid fa-hand-holding-heart",
+        "title": "Orientación a padres",
+        "description": "Acompañamiento en nutrición, hábitos y cuidados diarios."
+      }
+    ]
+  },
+  "psicologia": {
+    "id": "psicologia",
+    "title": "PSICOLOGIA",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs-v1Z2-LcT1IU2SDjZykjn6nfw5MZAA3XqrepVriF7QfxdPRy2uhw4_v5&s=10",
+    "paragraphs": [
+      "Brindamos acompañamiento profesional para el manejo de emociones, estrés y salud mental, fortaleciendo tu bienestar y calidad de vida.",
+      "A través de sesiones individuales, se trabajan estrategias de afrontamiento adaptadas a cada persona, promoviendo el autoconocimiento y el equilibrio emocional en cada etapa del proceso."
+    ],
+    "benefits": [
+      {
+        "icon": "fa-solid fa-spa",
+        "title": "Manejo del estrés",
+        "description": "Herramientas prácticas para reducir la ansiedad y el estrés diario."
+      },
+      {
+        "icon": "fa-solid fa-heart",
+        "title": "Acompañamiento emocional",
+        "description": "Espacio seguro para expresar y comprender tus emociones."
+      },
+      {
+        "icon": "fa-solid fa-brain",
+        "title": "Estrategias de afrontamiento",
+        "description": "Técnicas para enfrentar situaciones difíciles de manera saludable."
+      },
+      {
+        "icon": "fa-solid fa-user-check",
+        "title": "Seguimiento personalizado",
+        "description": "Acompañamiento continuo adaptado a tu proceso."
+      }
+    ]
+  },
+  "psiquiatria": {
+    "id": "psiquiatria",
+    "title": "PSIQUIATRIA",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfp7hE4ZGGKbDamjeG3VDQwpODZzf8-NJv_4WIi7q2_w&s=10",
+    "paragraphs": [
+      "Brinda atención médica especializada para la prevención, diagnóstico y tratamiento de trastornos de salud mental. Incluye evaluación clínica, manejo terapéutico y, cuando es necesario, tratamiento farmacológico para mejorar el bienestar emocional y la calidad de vida del paciente.",
+      "Está indicada para trastornos del ánimo, ansiedad, insomnio, estrés postraumático y otras condiciones que afectan la salud mental, siempre con acompañamiento profesional y seguimiento en cada etapa del proceso."
+    ],
+    "benefits": [
+      {
+        "icon": "fa-solid fa-brain",
+        "title": "Diagnóstico preciso",
+        "description": "Evaluación clínica detallada para identificar la condición con exactitud."
+      },
+      {
+        "icon": "fa-solid fa-user-doctor",
+        "title": "Tratamiento personalizado",
+        "description": "Planes terapéuticos y farmacológicos ajustados a cada paciente."
+      },
+      {
+        "icon": "fa-solid fa-calendar-check",
+        "title": "Seguimiento continuo",
+        "description": "Control periódico de la evolución y ajuste del tratamiento."
+      },
+      {
+        "icon": "fa-solid fa-lock",
+        "title": "Confidencialidad total",
+        "description": "Atención segura y privada en cada consulta."
+      }
+    ]
+  },
+  "terapia_fisica": {
+    "id": "terapia_fisica",
+    "title": "TERAPIA FISICA",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR79nNLn4sFlV3ug5gazX7mvYSG6Pr26gTO2iOBDFPtoQ&s=10",
+    "paragraphs": [
+      "Se enfoca en la prevención, tratamiento y rehabilitación de lesiones o condiciones que afectan el movimiento y la función física del cuerpo. A través de ejercicios terapéuticos y técnicas especializadas, se busca mejorar la movilidad, reducir el dolor y favorecer la recuperación del paciente.",
+      "Nuestros especialistas diseñan planes de tratamiento personalizados que combinan terapia manual, ejercicio terapéutico, electroestimulación y técnicas de reeducación postural, adaptados a la condición y al ritmo de recuperación de cada persona."
+    ],
+    "benefits": []
+  }
+}

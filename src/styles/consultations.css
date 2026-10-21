@@ -1,0 +1,327 @@
+/* Consultations / Realiza tu consulta Styles */
+.consultas-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  background: #fff;
+}
+
+.consultas-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.consultas-brand-name {
+  font-weight: 900;
+  font-size: 30px;
+  color: #1f7fc4;
+  line-height: 1.05;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.consultas-brand-name span {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: #2fa9e0;
+  margin-top: 3px;
+}
+
+.consultas-header-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2b2b2b;
+  line-height: 1.6;
+  flex: 1;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.consultas-title-bar {
+  background: #9aa1a6;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  position: relative;
+  width: 100%;
+}
+
+.consultas-back-arrow {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 34px;
+  font-weight: 900;
+  cursor: pointer;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+}
+
+.consultas-form-wrap {
+  background: linear-gradient(180deg, #2fa9e0, #1f7fc4);
+  padding: 32px 40px 56px;
+  width: 100%;
+  flex: 1;
+}
+
+.consultas-form-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.consultas-row {
+  display: flex;
+  gap: 16px;
+}
+
+.consultas-row .field {
+  flex: 1;
+  min-width: 0;
+}
+
+.consultas-field {
+  position: relative;
+}
+
+.consultas-field input,
+.consultas-field select,
+.consultas-field .select-display {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 24px;
+  border: 1.5px solid #b7bec4;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  font-family: var(--font-main);
+  box-sizing: border-box;
+}
+
+.consultas-field input::placeholder {
+  color: #7d838a;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.consultas-field input:focus,
+.consultas-field .select-display:focus {
+  border-color: #2fa9e0;
+}
+
+.select-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.select-display .arrow {
+  color: #1f2d3d;
+  font-size: 12px;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.select-display.open .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1px solid #e2e5e8;
+}
+
+.dropdown-panel.show {
+  display: block;
+}
+
+.dropdown-panel div {
+  padding: 13px 20px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+
+.dropdown-panel div:hover,
+.dropdown-panel div.active {
+  background: #2fa9e0;
+  color: #fff;
+}
+
+.consultas-terms {
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.7;
+}
+
+.consultas-terms button {
+  color: #1f7fc4;
+  text-decoration: underline;
+  font-weight: 800;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
+}
+
+.consultas-submit-btn {
+  background: linear-gradient(180deg, #38b6f0, #1f7fc4);
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 26px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: filter 0.2s;
+}
+
+.consultas-submit-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* Legal Views */
+.legal-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.legal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 34px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.legal-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  color: #222;
+  letter-spacing: 0.8px;
+  margin: 0 0 16px;
+}
+
+.legal-subtitle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #333;
+  margin: 0 0 20px;
+}
+
+.legal-intro {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.legal-list {
+  margin: 0 0 24px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legal-list li {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.6;
+}
+
+.legal-list li strong {
+  font-weight: 800;
+}
+
+.legal-accept {
+  display: block;
+  width: 100%;
+  background: linear-gradient(180deg, #38b6f0, #1f7fc4);
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 26px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+  .consultas-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 20px;
+  }
+  .consultas-header-text {
+    text-align: left;
+  }
+  .consultas-form-wrap {
+    padding: 24px 18px 40px;
+  }
+  .consultas-form-card {
+    padding: 22px 18px;
+  }
+  .consultas-row {
+    flex-direction: column;
+  }
+}

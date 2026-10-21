@@ -1,0 +1,97 @@
+/* Header Styles */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  background: #ffffff;
+}
+
+.site-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.site-header .logo-icon {
+  width: 44px;
+  height: auto;
+  display: block;
+}
+
+.site-header .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.site-header .logo-title {
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--blue-primary);
+  letter-spacing: 0.5px;
+}
+
+.site-header .logo-subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--blue-light);
+  letter-spacing: 2px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--gray-nav);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  color: var(--blue-primary);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-login-btn {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1.5px solid var(--blue-primary);
+  color: var(--blue-primary);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.nav-login-btn:hover {
+  background: var(--blue-primary);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 24px;
+  }
+
+  .main-nav {
+    justify-content: center;
+    gap: 16px;
+  }
+}

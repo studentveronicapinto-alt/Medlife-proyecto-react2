@@ -1,0 +1,30 @@
+:root {
+  --blue-primary: #1C86C4;
+  --blue-light: #4FB8D6;
+  --blue-dark: #125882;
+  --blue-btn-top: #3FB6E6;
+  --blue-btn-bottom: #1C86C4;
+  --gray-bar: #A6A6A6;
+  --gray-text: #58595B;
+  --gray-nav: #414042;
+  --bg-hero: #EEF3F6;
+  --font-main: 'Montserrat', sans-serif;
+  --font-serif: 'Merriweather', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #ffffff;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,227 @@
+/* Cart Styles */
+.sub-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 60px;
+  background: #ffffff;
+}
+
+.back-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--blue-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  color: var(--blue-primary);
+  transition: background 0.2s;
+}
+
+.back-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.back-arrow:hover {
+  background: #EAF6FA;
+}
+
+.context-bar {
+  display: flex;
+  align-items: center;
+  padding: 14px 60px;
+  background: var(--gray-bar);
+}
+
+.context-text.active-page {
+  background: #ffffff;
+  color: var(--blue-primary);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.carrito-section {
+  background-image: url('/assets/img/farmacia/especialidades-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 60px 60px;
+  flex: 1;
+  min-height: calc(100vh - 160px);
+}
+
+.empty-cart-msg {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 60px 0;
+  font-size: 18px;
+}
+
+.empty-cart-msg p {
+  margin-bottom: 20px;
+}
+
+.empty-cart-msg a {
+  color: #ffffff;
+  background: var(--blue-primary);
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 800;
+  transition: transform 0.2s;
+}
+
+.empty-cart-msg a:hover {
+  transform: scale(1.05);
+}
+
+.comprar-btn {
+  display: block;
+  margin: 30px auto 0;
+  background: linear-gradient(180deg, #3FB6E6, #1C86C4);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 18px 60px;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(28, 134, 196, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.comprar-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(28, 134, 196, 0.45);
+}
+
+.comprar-btn:disabled {
+  background: #cfcfcf;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Modal de confirmación */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.55);
+  backdrop-filter: blur(3px);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px;
+  width: 90%;
+  max-width: 480px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-box h2 {
+  color: var(--blue-primary);
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.modal-item-name {
+  font-weight: 700;
+  color: #333;
+  max-width: 60%;
+}
+
+.modal-item-qty {
+  color: #999;
+  font-weight: 600;
+}
+
+.modal-item-price {
+  color: var(--blue-primary);
+  font-weight: 800;
+}
+
+.modal-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 24px;
+  padding-top: 10px;
+  border-top: 2px solid #eee;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-cancel-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1.5px solid #ccc;
+  background: #f5f5f5;
+  color: #555;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-confirm-btn {
+  flex: 2;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(180deg, #3FB6E6, #1C86C4);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .sub-header,
+  .context-bar,
+  .carrito-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

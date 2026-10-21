@@ -1,0 +1,369 @@
+/* Pharmacy Styles */
+:root {
+  --yellow-badge: #F2C94C;
+}
+
+.context-bar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 14px 60px;
+  background: var(--gray-bar);
+  flex-wrap: wrap;
+}
+
+.context-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 24px;
+  opacity: 1;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.cart-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.cart-count {
+  background: var(--blue-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.context-text {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.reset-search {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.search-wrap {
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  gap: 8px;
+}
+
+.search-input {
+  border: none;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-family: var(--font-main);
+  font-size: 13px;
+  width: 220px;
+  outline: none;
+}
+
+.search-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.suggestions-box {
+  display: none;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 220px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  z-index: 50;
+}
+
+.suggestions-box.active {
+  display: block;
+}
+
+.suggestion-item {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #414042;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #EAF6FA;
+  color: var(--blue-primary);
+}
+
+.no-results {
+  text-align: center;
+  color: #888;
+  font-weight: 700;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.farmacia-section {
+  background-image: url('/assets/img/farmacia/especialidades-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 60px 80px;
+  flex: 1;
+  min-height: calc(100vh - 160px);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  position: relative;
+  background: #F4F8FA;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--yellow-badge);
+  color: #4a3b00;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.add-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--blue-primary);
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn:hover {
+  background: #156d9f;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 44px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e74c3c;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  background: #c0392b;
+}
+
+.qty-label {
+  position: absolute;
+  top: 42px;
+  right: 10px;
+  background: #ffffff;
+  color: var(--blue-primary);
+  font-weight: 800;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.product-icon {
+  width: 70px;
+  height: 90px;
+}
+
+.promo-banner {
+  background: var(--yellow-badge);
+  color: #4a3b00;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 8px 30px 8px 10px;
+  position: relative;
+  line-height: 1.3;
+}
+
+.wish-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #4a3b00;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.wish-btn.active {
+  color: #e74c3c;
+}
+
+.brand {
+  color: #9a9a9a;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 8px 10px 0;
+}
+
+.product-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333333;
+  padding: 2px 10px 6px;
+  line-height: 1.35;
+  min-height: 34px;
+}
+
+.price-row {
+  padding: 0 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price {
+  color: var(--blue-primary);
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.price-old {
+  color: #b0b0b0;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.meta-row {
+  padding: 6px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #7a7a7a;
+}
+
+.rating {
+  padding: 6px 10px 14px;
+  font-size: 12px;
+  color: #F2A93B;
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .context-bar {
+    padding: 14px 24px;
+  }
+  .search-wrap {
+    margin-left: 0;
+    width: 100%;
+  }
+  .search-input {
+    flex: 1;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

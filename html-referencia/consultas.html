@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Realiza tu consulta - MEDLIFE</title>
+<style>
+* { box-sizing: border-box; }
+ 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+ 
+body {
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  background: #ffffff;
+  font-weight: 500;
+}
+ 
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+ 
+/* ============ HEADER ============ */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+}
+ 
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+ 
+.brand-name {
+  font-weight: 900;
+  font-size: 30px;
+  color: #1f7fc4;
+  line-height: 1.05;
+  white-space: nowrap;
+  letter-spacing: .5px;
+}
+ 
+.brand-name span {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: #2fa9e0;
+  margin-top: 3px;
+}
+ 
+.header-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2b2b2b;
+  line-height: 1.6;
+  flex: 1;
+  text-align: center;
+  letter-spacing: .2px;
+}
+ 
+/* ============ BARRA DE TÍTULO ============ */
+.title-bar {
+  background: #9aa1a6;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  position: relative;
+  width: 100%;
+}
+ 
+.back-arrow {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 34px;
+  font-weight: 900;
+  cursor: pointer;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+}
+ 
+/* ============ CONTENEDOR DEL FORMULARIO ============ */
+.form-wrap {
+  background: linear-gradient(180deg, #2fa9e0, #1f7fc4);
+  padding: 32px 40px 56px;
+  width: 100%;
+}
+ 
+.form-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+ 
+.row {
+  display: flex;
+  gap: 16px;
+}
+.row .field { flex: 1; min-width: 0; }
+ 
+.field { position: relative; }
+ 
+.field input,
+.field .select-display {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 24px;
+  border: 1.5px solid #b7bec4;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7d838a;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+.field input::placeholder {
+  color: #7d838a;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.field input:focus,
+.select-display:focus {
+  border-color: #2fa9e0;
+}
+ 
+.select-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+.select-display .arrow {
+  color: #1f2d3d;
+  font-size: 12px;
+  margin-left: 8px;
+  transition: transform .2s ease;
+}
+.select-display.open .arrow {
+  transform: rotate(180deg);
+}
+ 
+/* ============ DROPDOWN ============ */
+.dropdown-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  z-index: 50;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1px solid #e2e5e8;
+}
+.dropdown-panel.show { display: block; }
+ 
+.dropdown-panel div {
+  padding: 13px 20px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: .3px;
+  cursor: pointer;
+}
+.dropdown-panel div:hover,
+.dropdown-panel div.active {
+  background: #2fa9e0;
+  color: #fff;
+}
+ 
+.terms {
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.7;
+}
+.terms a {
+  color: #1f7fc4;
+  text-decoration: underline;
+  font-weight: 800;
+}
+ 
+.submit-btn {
+  background: linear-gradient(180deg, #38b6f0, #1f7fc4);
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 26px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.submit-btn:hover { filter: brightness(1.05); }
+ 
+/* ============ VISTAS (FORMULARIO / LEGALES) ============ */
+.view { display: none; }
+.view.active { display: block; }
+ 
+/* ============ PÁGINAS LEGALES ============ */
+.legal-wrap {
+  background: linear-gradient(180deg, #2fa9e0, #1f7fc4);
+  padding: 32px 40px 56px;
+  position: relative;
+  width: 100%;
+}
+ 
+.legal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 34px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+ 
+.legal-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  color: #222;
+  letter-spacing: .8px;
+  margin: 0 0 16px;
+}
+ 
+.legal-subtitle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #333;
+  margin: 0 0 20px;
+}
+ 
+.legal-intro {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+ 
+.legal-list {
+  margin: 0 0 24px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.legal-list li {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.6;
+}
+.legal-list li strong {
+  font-weight: 800;
+}
+ 
+.legal-accept {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #38b6f0, #1f7fc4);
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 26px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  cursor: pointer;
+}
+.legal-accept:hover { filter: brightness(1.05); }
+ 
+/* ============ RESPONSIVE ============ */
+@media (max-width: 700px) {
+  .header { flex-direction: column; align-items: flex-start; gap: 12px; padding: 18px 20px; }
+  .header-text { text-align: left; }
+  .form-wrap, .legal-wrap { padding: 24px 18px 40px; }
+  .form-card, .legal-card { padding: 22px 18px; }
+  .row { flex-direction: column; }
+  .back-arrow { left: 16px; font-size: 28px; }
+}
+
+</style>
+</head>
+<body>
+ 
+<div class="app">
+ 
+  <div class="header">
+    <div class="logo-block">
+      <div class="brand-name">MEDLIFE<span>VIRTUAL HEALTHCARE</span></div>
+    </div>
+    <div class="header-text">
+      ENVÍANOS LOS SIGUIENTES DATOS PARA ASIGNARTE EL SERVICIO MÉDICO QUE REQUIERAS.<br>
+      PODEMOS ATENDERTE POR VIDEOLLAMADAS, CHAT 24/7 O EN CONSULTORIOS VIRTUALES
+    </div>
+  </div>
+ 
+  <div class="title-bar">
+    <a class="back-arrow" href="inicio.html" id="backLink">&#8249;</a>
+    REALIZA TU CONSULTA
+  </div>
+ 
+  <div class="form-wrap">
+    <form class="form-card" id="medlifeForm">
+ 
+      <div class="field">
+        <input type="text" placeholder="Ingrese su nombre completo (nombres y apellidos)">
+      </div>
+ 
+      <div class="row">
+        <div class="field" id="tipoDocumentoField">
+          <div class="select-display" tabindex="0" data-target="tipoDocumentoPanel">
+            <span class="select-label">INGRESE SU TIPO DE DOCUMENTO</span>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="dropdown-panel" id="tipoDocumentoPanel">
+            <div>Cédula Ciudadanía</div>
+            <div>Cédula Extranjería</div>
+            <div>Tarj. Identidad</div>
+            <div>Pasaporte</div>
+            <div>Registro Civil</div>
+          </div>
+        </div>
+        <div class="field">
+          <input type="tel" placeholder="Ingrese su número de teléfono">
+        </div>
+      </div>
+ 
+      <div class="field">
+        <input type="text" placeholder="Ingrese su número de documento">
+      </div>
+ 
+      <div class="row">
+        <div class="field" id="departamentoField">
+          <div class="select-display" tabindex="0" data-target="departamentoPanel">
+            <span class="select-label">SELECCIONE DEPARTAMENTO</span>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="dropdown-panel" id="departamentoPanel">
+            <div>Amazonas</div>
+            <div>Antioquia</div>
+            <div>Arauca</div>
+            <div>Atlántico</div>
+            <div>Bolívar</div>
+            <div>Boyacá</div>
+          </div>
+        </div>
+        <div class="field" id="ciudadField">
+          <div class="select-display" tabindex="0" data-target="ciudadPanel">
+            <span class="select-label">SELECCIONE CIUDAD</span>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="dropdown-panel" id="ciudadPanel">
+            <div>Leticia</div>
+            <div>Medellín</div>
+            <div>Arauca</div>
+            <div>Barranquilla</div>
+            <div>Cartagena</div>
+            <div>Tunja</div>
+            <div>Manizales</div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="field">
+        <input type="text" placeholder="Ingrese su dirección ( Barrio, número, código postal)">
+      </div>
+ 
+      <div class="row">
+        <div class="field">
+          <input type="email" placeholder="Ingrese su correo electrónico">
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Ingrese una contraseña">
+        </div>
+      </div>
+ 
+      <div class="terms">
+        Al enviar sus datos, está de acuerdo con la ley vigente <a href="habeasdata.html" id="habeasLink">Habeas Data</a> y los <a href="terminos.html" id="termsLink">términos y condiciones</a>
+        que puede consultar
+      </div>
+ 
+      <button type="submit" class="submit-btn">ENVIAR DATOS</button>
+ 
+    </form>
+  </div>
+ 
+</div>
+ 
+<script>
+  // ==== Configuración: a dónde enlazar cada botón/flecha ====
+  // Cambia esta URL por la página a la que quieres que el usuario sea
+  // redirigido después de enviar el formulario.
+  var SUBMIT_REDIRECT_URL = "servicios.html";
+
+  // Toggle logic for all dropdowns
+  document.querySelectorAll('.select-display').forEach(function (display) {
+    display.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var panel = document.getElementById(display.getAttribute('data-target'));
+      var isOpen = panel.classList.contains('show');
+ 
+      document.querySelectorAll('.dropdown-panel').forEach(function (p) { p.classList.remove('show'); });
+      document.querySelectorAll('.select-display').forEach(function (d) { d.classList.remove('open'); });
+ 
+      if (!isOpen) {
+        panel.classList.add('show');
+        display.classList.add('open');
+      }
+    });
+ 
+    display.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        display.click();
+      }
+    });
+  });
+ 
+  // Select an option
+  document.querySelectorAll('.dropdown-panel div').forEach(function (option) {
+    option.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var panel = option.closest('.dropdown-panel');
+      var field = panel.closest('.field');
+      var label = field.querySelector('.select-label');
+      var display = field.querySelector('.select-display');
+ 
+      label.textContent = option.textContent.toUpperCase();
+      panel.querySelectorAll('div').forEach(function (d) { d.classList.remove('active'); });
+      option.classList.add('active');
+ 
+      panel.classList.remove('show');
+      display.classList.remove('open');
+    });
+  });
+ 
+  // Click outside closes all dropdowns
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.dropdown-panel').forEach(function (p) { p.classList.remove('show'); });
+    document.querySelectorAll('.select-display').forEach(function (d) { d.classList.remove('open'); });
+  });
+ 
+  document.querySelectorAll('.dropdown-panel').forEach(function (panel) {
+    panel.addEventListener('click', function (e) { e.stopPropagation(); });
+  });
+ 
+  // Envío del formulario (demo) + redirección configurable a otra página
+  document.getElementById('medlifeForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Formulario enviado (demo).');
+    if (SUBMIT_REDIRECT_URL) {
+      window.location.href = SUBMIT_REDIRECT_URL;
+    }
+  });
+</script>
+ 
+</body>
+</html>

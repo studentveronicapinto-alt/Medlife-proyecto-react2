@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medlife | Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/img/blog/logo.png" alt="Medlife" class="logo-icon">
+      <div class="logo-text">
+        <span class="logo-title">MEDLIFE</span>
+        <span class="logo-subtitle">VIRTUAL HEALTHCARE</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="inicio.html">INICIO</a>
+      <a href="nosotros.html">NOSOTROS</a>
+      <a href="especialidades.html">ESPECIALIDADES</a>
+      <a href="servicios.html">SERVICIOS</a>
+      <a href="blog.html" class="active">BLOG</a>
+      <a href="farmacia.html">FARMACIA</a>
+      <a href="pagos.html">PAGOS</a>
+    </nav>
+  </header>
+
+  <div class="gray-bar"></div>
+
+  <main class="blog-section">
+
+    <!--
+      Panel blanco que envuelve todo el contenido (meta + artículo + sidebar),
+      así descansa legible sobre la imagen de fondo sin tocar ningún color de texto original.
+    -->
+    <div class="content-panel">
+
+      <div class="post-meta">
+        <span class="meta-item">
+          <svg viewBox="0 0 24 24" class="meta-icon"><circle cx="12" cy="12" r="9" fill="none" stroke="#414042" stroke-width="1.6"/><path d="M12 7 V12 L16 14" fill="none" stroke="#414042" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          PUBLICADO HACE 2 AÑOS
+        </span>
+        <span class="meta-item">
+          <svg viewBox="0 0 24 24" class="meta-icon"><path d="M12 20 C5 15, 3 10, 7 6.5 C9.5 4.3, 12 5.5, 12 8 C12 5.5, 14.5 4.3, 17 6.5 C21 10, 19 15, 12 20 Z" fill="none" stroke="#414042" stroke-width="1.6"/><path d="M10 8 h4 M12 6 v4" stroke="#414042" stroke-width="1.4" stroke-linecap="round"/></svg>
+          SALUD
+        </span>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="post-body">
+
+          <div class="post-head">
+            <div class="post-image">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" rx="16" fill="#EAF6FA"/>
+                <path d="M100 155 C65 130, 45 105, 55 78 C63 55, 90 58, 100 78 C110 58, 137 55, 145 78 C155 105, 135 130, 100 155 Z"
+                      fill="none" stroke="#1C86C4" stroke-width="6" stroke-linejoin="round"/>
+                <path d="M70 100 C66 92, 74 84, 82 88 C86 90, 86 96, 82 100 L74 108"
+                      fill="none" stroke="#4FB8D6" stroke-width="4.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="post-intro">
+              <h1>¿Qué es la lepra?</h1>
+              <p>La lepra, también llamada enfermedad de Hansen, es una enfermedad infecciosa crónica causada por una bacteria llamada Mycobacterium leprae. Esta bacteria afecta principalmente la piel, los nervios periféricos, los ojos y algunas partes de las vías respiratorias.</p>
+            </div>
+          </div>
+
+          <p>La lepra se transmite de una persona a otra principalmente a través de gotas que salen por la nariz o la boca cuando una persona enferma y no tratada tose o estornuda. Sin embargo, no es una enfermedad muy contagiosa, y normalmente se necesita contacto cercano y prolongado con una persona infectada para que ocurra el contagio.</p>
+
+          <p>Uno de los síntomas más comunes de la lepra es la aparición de manchas claras o rojizas en la piel que pueden perder sensibilidad. También pueden aparecer entumecimiento en manos y pies, debilidad muscular, lesiones en la piel y daño en los nervios. Si la enfermedad no se trata a tiempo, puede causar daños permanentes en los nervios, deformaciones en manos o pies y problemas en los ojos.</p>
+
+          <p>La lepra tiene cura. Actualmente se trata con una combinación de antibióticos especiales durante varios meses, tratamiento conocido como terapia multidrogas, recomendado por la Organización Mundial de la Salud. Con el tratamiento adecuado, la persona deja de contagiar rápidamente y puede recuperarse.</p>
+
+        </article>
+
+        <aside class="sidebar">
+          <h3>Categorías</h3>
+          <ul class="category-list">
+            <li><a href="#">Bienestar</a></li>
+            <li><a href="#">Corporativo</a></li>
+            <li><a href="#">Salud</a></li>
+          </ul>
+
+          <h3>Entradas recientes</h3>
+          <ul class="recent-list">
+            <li><a href="#">¿Qué es la lepra?</a></li>
+            <li><a href="#">Día internacional del síndrome de Asperger</a></li>
+            <li><a href="#">Día mundial del glaucoma</a></li>
+          </ul>
+        </aside>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <a href="ia.html" class="ia-float-btn" aria-label="Ir a IA">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#ffffff"/>
+      <polygon points="42.0,25.0 49.1,47.9 72.0,55.0 49.1,62.1 42.0,85.0 34.9,62.1 12.0,55.0 34.9,47.9" fill="#2E9EF0"/>
+      <polygon points="74.0,15.0 76.5,23.5 85.0,26.0 76.5,28.5 74.0,37.0 71.5,28.5 63.0,26.0 71.5,23.5" fill="#2E9EF0"/>
+      <g fill="#2E9EF0">
+        <rect x="70" y="70" width="18" height="6" rx="2"/>
+        <rect x="76" y="64" width="6" height="18" rx="2"/>
+      </g>
+      <text x="42" y="60" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="20" fill="#ffffff">IA</text>
+    </svg>
+  </a>
+
+</body>
+</html>
